@@ -1,0 +1,83 @@
+:root{
+ 
+    --bg-color:white
+    --txt-color:black;
+
+}
+body{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+}
+
+
+
+header{
+    width: 100%;
+}
+
+
+
+
+fieldset{
+    border: 1px solid purple ;
+    width: fit-content;
+    padding: 20px;
+    margin:20px;
+    font-size: 24px;
+    background-color: white;
+
+    
+   
+}
+input[type="radio"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: 0px 20px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid var(--radio-color);
+    outline: 2px solid black;
+    outline-offset: 3px;
+
+}
+input[type="radio"]:checked{
+    background-color: var(--radio-color);
+
+}
+#light{
+    --radio-color:#E5D1FA;
+}
+#blue{
+    --radio-color:#4E31AA;
+}
+#green{
+    --radio-color:#609966;
+}
+#dark{
+    --radio-color:#060047;
+}
+
+:root:has(#light:checked){
+    --bg-color:#E5D1FA;
+    --txt-color:black;
+}
+
+:root:has(#blue:checked){
+    --bg-color:#4E31AA;
+    --txt-color:#4E31AA;
+}
+:root:has(#green:checked){
+    --bg-color:#609966;
+    --txt-color:#609966;
+}
+:root:has(#dark:checked){
+    --bg-color:#060047;
+    --txt-color:#060047;
+    
+}
